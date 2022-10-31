@@ -585,9 +585,9 @@ construct_runtime!(
 		TemplatePallet: pallet_template::{Pallet, Call, Storage, Event<T>}  = 40,
 
 		// Contracts
-		RandomnessCollectiveFlip: pallet_randomness_collective_flip,
-		Contracts: pallet_contracts,
-		Assets: pallet_assets,
+		RandomnessCollectiveFlip: pallet_randomness_collective_flip = 50,
+		Contracts: pallet_contracts = 51,
+		Assets: pallet_assets = 52,
 	}
 );
 
@@ -845,6 +845,7 @@ impl_runtime_apis! {
 			Contracts::get_storage(address, key)
 		}
 	}
+	
 }
 
 struct CheckInherents;
