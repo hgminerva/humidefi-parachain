@@ -544,8 +544,11 @@ impl pallet_contracts::Config for Runtime {
 	type MaxStorageKeyLen = ConstU32<128>;
 }
 
-/// Configure the pallet template in pallets/template.
 impl pallet_template::Config for Runtime {
+	type Event = Event;
+}
+
+impl pallet_dex::Config for Runtime {
 	type Event = Event;
 }
 
@@ -581,8 +584,9 @@ construct_runtime!(
 		CumulusXcm: cumulus_pallet_xcm::{Pallet, Event<T>, Origin} = 32,
 		DmpQueue: cumulus_pallet_dmp_queue::{Pallet, Call, Storage, Event<T>} = 33,
 
-		// Template
+		// Local Pallets
 		TemplatePallet: pallet_template::{Pallet, Call, Storage, Event<T>}  = 40,
+		DexPallet: pallet_dex::{Pallet, Call, Storage, Event<T>}  = 41,
 
 		// Contracts
 		RandomnessCollectiveFlip: pallet_randomness_collective_flip = 50,
