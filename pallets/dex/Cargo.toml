@@ -19,6 +19,8 @@ scale-info = { version = "2.0.0", default-features = false, features = ["derive"
 frame-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true, branch = "polkadot-v0.9.29" }
 frame-support = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.29" }
 frame-system = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.29" }
+pallet-contracts = { git = "https://github.com/paritytech/substrate", default-features = false, features = ["unstable-interface"], branch = "polkadot-v0.9.29" }
+serde_json = { version = '1.0.45', default-features = false, features = ['alloc'] }
 
 [dev-dependencies]
 serde = { version = "1.0.132" }

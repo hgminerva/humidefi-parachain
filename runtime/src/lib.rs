@@ -550,6 +550,7 @@ impl pallet_template::Config for Runtime {
 
 impl pallet_dex::Config for Runtime {
 	type Event = Event;
+	type Currency = pallet_balances::Pallet<Runtime>;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.
