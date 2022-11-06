@@ -1,8 +1,24 @@
+WASM 
+./target/release/parachain-template-node export-genesis-state > genesis-state
+./target/release/parachain-template-node export-genesis-wasm > genesis-wasm
+
 Collator - Alice
-./target/release/parachain-template-node --collator --alice --force-authoring --tmp --port 40335 --ws-port 9946 -- --execution wasm --chain ../humidefi-relaychain/rococo-local-cfde.json --port 30335 --rpc-cors all --ws-external --bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
+./target/release/parachain-template-node --collator --alice --force-authoring  \
+--tmp --port 40335 --ws-port 9946 -- --execution wasm \
+--chain ../humidefi-relaychain/rococo-local-cfde.json --port 30335 \
+--rpc-cors all --ws-external \
+--bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
 
 Collator - Bob
-./target/release/parachain-template-node --collator --bob --force-authoring --tmp --port 40336 --ws-port 9947 -- --execution wasm --chain ../humidefi-relaychain/rococo-local-cfde.json --port 30336 --rpc-cors all --ws-external --bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
+./target/release/parachain-template-node --collator --bob --force-authoring \
+--tmp --port 40336 --ws-port 9947 -- --execution wasm \
+--chain ../humidefi-relaychain/rococo-local-cfde.json --port 30336 \
+--rpc-cors all --ws-external \
+--bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
 
 Parachain
-./target/release/parachain-template-node --tmp --port 40337 --ws-port 9948 -- --execution wasm --chain ../humidefi-relaychain/rococo-local-cfde.json --port 30337 --rpc-cors all --ws-external --bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
+./target/release/parachain-template-node --tmp --port 40337 \
+--ws-port 9948 -- --execution wasm \
+--chain ../humidefi-relaychain/rococo-local-cfde.json --port 30337 \
+--rpc-cors all --ws-external \
+--bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
