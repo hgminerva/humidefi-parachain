@@ -1,0 +1,17 @@
+./target/release/parachain-template-node \
+--alice \
+--collator \
+--force-authoring \
+--chain raw-parachain-chainspec.json \
+--base-path /tmp/parachain/collator1 \
+--port 40334 \
+--ws-port 8844 \
+--rpc-external \
+--rpc-methods Unsafe \
+--rpc-cors all \
+-- \
+--execution wasm \
+--chain ../humidefi-relaychain/rococo-local-cfde.json \
+--port 30343 \
+--ws-port 9977 \
+--bootnodes /ip4/91.200.100.103/tcp/30333/p2p/12D3KooWEyoppNCUx8Yx66oV9fJnriXwCcXwDDUA2kj6vnc6iDEp
