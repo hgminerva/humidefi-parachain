@@ -3,7 +3,7 @@
 --collator \
 --force-authoring \
 --chain raw-parachain-chainspec.json \
---base-path /tmp/parachain/collator1 \
+--base-path /home/ubuntu/s3bucket/parachain/collator1 \
 --port 30333 \
 --ws-port 9944 \
 --rpc-port 9933 \
