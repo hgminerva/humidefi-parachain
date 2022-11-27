@@ -7,7 +7,7 @@
 
 use std::sync::Arc;
 
-use parachain_template_runtime::{opaque::Block, AccountId, Balance, BlockNumber, Hash, Index as Nonce};
+use humidefi_runtime::{opaque::Block, AccountId, Balance, BlockNumber, Hash, Index as Nonce};
 
 use sc_client_api::AuxStore;
 pub use sc_rpc::{DenyUnsafe, SubscriptionTaskExecutor};
