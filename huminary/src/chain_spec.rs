@@ -119,13 +119,13 @@ pub fn development_config() -> ChainSpec {
 pub fn local_testnet_config() -> ChainSpec {
 	// Give your base currency a unit name and decimal places
 	let mut properties = sc_chain_spec::Properties::new();
-	properties.insert("tokenSymbol".into(), "UMI".into());
+	properties.insert("tokenSymbol".into(), "URI".into());
 	properties.insert("tokenDecimals".into(), 14.into());
 	properties.insert("ss58Format".into(), 42.into());
 
 	ChainSpec::from_genesis(
 		// Name
-		"Local Testnet",
+		"Huminary",
 		// ID
 		"local_testnet",
 		ChainType::Local,
@@ -162,7 +162,7 @@ pub fn local_testnet_config() -> ChainSpec {
 		// Extensions
 		Extensions {
 			relay_chain: "rococo-local".into(), // You MUST set this to the correct network!
-			para_id: 2000,
+			para_id: 1060,
 		},
 	)
 }

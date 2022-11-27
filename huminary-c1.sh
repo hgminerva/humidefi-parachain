@@ -1,12 +1,12 @@
-./target/release/parachain-template-node \
---alice \
+./target/release/huminary-node \
+--name Huminary1 \
 --collator \
 --force-authoring \
---chain raw-parachain-chainspec.json \
---base-path /tmp/parachain/collator1 \
---port 30333 \
---ws-port 9944 \
---rpc-port 9933 \
+--chain raw-huminary-chainspec.json \
+--base-path /tmp/huminary/collator1 \
+--port 30335 \
+--ws-port 9946 \
+--rpc-port 9935 \
 --rpc-external \
 --rpc-methods Unsafe \
 --rpc-cors all \
