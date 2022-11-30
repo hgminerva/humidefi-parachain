@@ -17,4 +17,6 @@
 .idea
 .vscode
 
-plain-parachain-chainspec.json
+huminary-chainspec.json
+huminary-instructions.txt
+aura-keys.txt

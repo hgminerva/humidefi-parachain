@@ -5,10 +5,10 @@
 ./target/release/huminary-node build-spec --chain huminary-chainspec.json --disable-default-bootnode --raw > raw-huminary-chainspec.json
 
 # Parachain WASM
-./target/release/huminary-node export-genesis-wasm --chain raw-huminary-chainspec.json para-1061-wasm
+./target/release/huminary-node export-genesis-wasm --chain raw-huminary-chainspec.json para-1015-wasm
 
 # Parachain state
-./target/release/huminary-node export-genesis-state --chain raw-huminary-chainspec.json para-1061-genesis-state
+./target/release/huminary-node export-genesis-state --chain raw-huminary-chainspec.json para-1015-genesis-state
 
 
 
