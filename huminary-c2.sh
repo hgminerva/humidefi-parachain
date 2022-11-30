@@ -1,12 +1,12 @@
 ./target/release/huminary-node \
---name Huminary \
+--name Huminary2 \
 --collator \
 --force-authoring \
 --chain raw-huminary-chainspec.json \
---base-path /tmp/huminary/collator1 \
---port 30335 \
---ws-port 9946 \
---rpc-port 9935 \
+--base-path /tmp/huminary/collator2 \
+--port 30336 \
+--ws-port 9947 \
+--rpc-port 9936 \
 --rpc-external \
 --rpc-methods Unsafe \
 --rpc-cors all \
