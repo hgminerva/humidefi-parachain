@@ -1,9 +1,9 @@
 ./target/release/huminary-node \
---name Huminary1 \
+--name Huminary001 \
 --collator \
 --force-authoring \
 --chain raw-huminary-chainspec.json \
---base-path /tmp/huminary/collator1 \
+--base-path /home/ubuntu/s3bucket/huminary/collator1 \
 --rpc-external \
 --rpc-methods Unsafe \
 --rpc-cors all \
