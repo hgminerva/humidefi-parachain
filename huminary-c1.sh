@@ -1,9 +1,13 @@
 ./target/release/huminary-node \
+<<<<<<< HEAD
 --name Huminary \
+=======
+--name Huminary001 \
+>>>>>>> dbcd2b5 (Bootnode Humidefi Setup)
 --collator \
 --force-authoring \
 --chain raw-huminary-chainspec.json \
---base-path /tmp/huminary/collator1 \
+--base-path /home/ubuntu/s3bucket/huminary/collator1 \
 --rpc-external \
 --rpc-methods Unsafe \
 --rpc-cors all \
