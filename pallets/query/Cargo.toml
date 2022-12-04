@@ -1,7 +1,7 @@
 [package]
-name = "pallet-template"
+name = "pallet-query"
 authors = ["Anonymous"]
-description = "FRAME pallet template for defining custom runtime logic."
+description = "Humidefi query pallet"
 version = "0.1.0"
 license = "Unlicense"
 homepage = "https://substrate.io"

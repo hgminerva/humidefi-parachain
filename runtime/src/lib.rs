@@ -57,7 +57,7 @@ use xcm_executor::XcmExecutor;
 use pallet_contracts::{DefaultContractAccessWeight};
 
 /// Import the template pallet.
-pub use pallet_template;
+pub use pallet_query;
 
 /// Alias to 512-bit hash when used in the context of a transaction signature on the chain.
 pub type Signature = MultiSignature;
@@ -544,7 +544,7 @@ impl pallet_contracts::Config for Runtime {
 	type MaxStorageKeyLen = ConstU32<128>;
 }
 
-impl pallet_template::Config for Runtime {
+impl pallet_query::Config for Runtime {
 	type Event = Event;
 }
 
@@ -586,9 +586,9 @@ construct_runtime!(
 		DmpQueue: cumulus_pallet_dmp_queue::{Pallet, Call, Storage, Event<T>} = 33,
 
 		// Local Pallets
-		TemplatePallet: pallet_template::{Pallet, Call, Storage, Event<T>}  = 40,
+		QueryPallet: pallet_query::{Pallet, Call, Storage, Event<T>}  = 40,
 		DexPallet: pallet_dex::{Pallet, Call, Storage, Event<T>}  = 41,
-
+		
 		// Contracts
 		RandomnessCollectiveFlip: pallet_randomness_collective_flip = 50,
 		Contracts: pallet_contracts = 51,
