@@ -11,12 +11,13 @@
     "tokenSymbol": "URI"
   },
   "relay_chain": "rococo-local",
-  "para_id": 1100,
+  "para_id": 1200,
   "codeSubstitutes": {},
   "genesis": {
     "raw": {
       "top": {
-        "0x0d715f2646c8f85767b5d2764bb2782604a74d81251e398fd8a0a4d55023bb3f": "0x4c040000",
+        "0x07d29b6a5e109d8bff69c0ca8c9af5d14e7b9012096b41c4eb3aaf947f6ea429": "0x0000",
+        "0x0d715f2646c8f85767b5d2764bb2782604a74d81251e398fd8a0a4d55023bb3f": "0xb0040000",
         "0x0d715f2646c8f85767b5d2764bb278264e7b9012096b41c4eb3aaf947f6ea429": "0x0000",
         "0x15464cac3378d46f113cd5b7a4d71c84476f594316a7dfe49c1f352d95abdaf1": "0x00000000",
         "0x15464cac3378d46f113cd5b7a4d71c844e7b9012096b41c4eb3aaf947f6ea429": "0x0000",
@@ -69,7 +70,6 @@
         "0xd57bce545fb382c34570e5dfbf338f5e4e7b9012096b41c4eb3aaf947f6ea429": "0x0000",
         "0xe38f185207498abb5c213d0fb059b3d84e7b9012096b41c4eb3aaf947f6ea429": "0x0000",
         "0xe38f185207498abb5c213d0fb059b3d86323ae84c43568be0d1394d5d0d522c4": "0x02000000",
-        "0xef8cadb5008997742232597d11bbb6fe4e7b9012096b41c4eb3aaf947f6ea429": "0x0000",
         "0xf0c365c3cf59d671eb72da0e7a4113c44e7b9012096b41c4eb3aaf947f6ea429": "0x0000"
       },
       "childrenDefault": {}

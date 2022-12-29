@@ -24,6 +24,7 @@ pub mod pallet {
 	#[pallet::generate_deposit(pub(super) fn deposit_event)]
 	pub enum Event<T: Config> {
 		SomethingStored(u32, T::AccountId),
+		TransactionQueried(T::AccountId),
 	}
 
 	#[pallet::error]
@@ -39,10 +40,10 @@ pub mod pallet {
 	impl<T: Config> Pallet<T> {
 
 		#[pallet::weight(Weight::from_ref_time(10_000) + T::DbWeight::get().writes(1))]
-		pub fn query_transaction(origin: OriginFor<T>, something: u32) -> DispatchResultWithPostInfo {
+		pub fn query_transaction(origin: OriginFor<T>, address: T::AccountId, page: u32) -> DispatchResultWithPostInfo {
 			let who = ensure_signed(origin)?;
-			<Something<T>>::put(something);
-			Self::deposit_event(Event::SomethingStored(something, who));
+
+			Self::deposit_event(Event::TransactionQueried(address));
 			Ok(().into())
 		}
 
