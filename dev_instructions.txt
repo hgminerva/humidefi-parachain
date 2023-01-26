@@ -25,3 +25,33 @@ Parachain
 
 
 ./target/release/huminary-node --alice --force-authoring  --port 30335 --ws-port 9946
+
+Parachain state
+https://substrate.stackexchange.com/questions/1682/how-to-export-the-current-running-chain-data-and-import-it-in-a-new-chain
+
+./target/release/parachain-template-node export-state --chain=raw-parachain-chainspec.json --base-path /tmp/parachain/alice 20 > chain-exported-20.json
+
+./target/release/parachain-template-node export-genesis-state --chain=chain-exported-20.json > chain-exported-genesis-state-20
+
+./target/release/parachain-template-node export-genesis-wasm --chain=chain-exported-20.json > chain-exported-genesis-wasm-20
+
+--chain chain-exported-20.json \
+
+Reviving the Parachain when the Relaychain collapses.
+
+1. Revive the Relaychain by cleaning the DB
+2. Shutdown the Parachain
+3. Run the new Relaychain
+4. In the Parachain remove the Relaychain Head database copy
+5. Run again the Parachain to sync the new Relaychain Head database
+6. Take note of the last block number of the Parachain
+    [Parachain] 💤 Idle (0 peers), best: #9062 (0xf9b8…1087), finalized #9062 (0xf9b8…1087), ⬇ 1.1kiB/s ⬆ 0.7kiB/s
+7.  Stop the Parachain to make the chainspec at Block 9062
+    ./target/release/huminary-node export-state --chain raw-huminary-chainspec.json --base-path /home/ubuntu/s3bucket/huminary/collator1 9062 > raw-huminary-chainspec-9062.json
+8. Create a new Genesis State from the newly created chainspec
+    ./target/release/huminary-node export-genesis-state --chain=raw-huminary-chainspec-9062.json > para-1200-genesis-state-9062
+9. Create a new Genesis WASM from the newly created chainspec
+./target/release/huminary-node export-genesis-wasm --chain=raw-huminary-chainspec-9062.json > para-1200-genesis-wasm-9062
+10. 
+    
+    
