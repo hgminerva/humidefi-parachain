@@ -11,7 +11,7 @@
     "tokenSymbol": "URI"
   },
   "relay_chain": "rococo-local",
-  "para_id": 1200,
+  "para_id": 1060,
   "codeSubstitutes": {},
   "genesis": {
     "raw": {
